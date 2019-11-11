@@ -17,8 +17,6 @@ void	*ft_lstfold(t_list *lst, void *(*f)(void *, void *))
 	t_list	*list;
 	void	*res;
 
-	if (!lst || !f || !*f || !*(*f))
-		return 0;
 	list = lst;
 	res = list->content;
 	list = list->next;

@@ -65,10 +65,3 @@ int			ft_atoi_base(const char *str, int str_base)
 		res = res * str_base + value_of(*str++);
 	return (res * negative);
 }
-
-int main(void)
-{
-	const char kek[] = "AABCD";
-	int str_base = 4;
-	printf("%d", ft_atoi_base(kek,str_base));
-}

@@ -18,8 +18,6 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 	t_list	*atmp;
 	t_list	*anext;
 
-	if (!alst || !*alst)
-		return ;
 	atmp = *alst;
 	while (atmp)
 	{

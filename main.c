@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mac <mac@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/06 09:16:32 by mac               #+#    #+#             */
+/*   Created: 2019/11/06 09:23:35 by mac               #+#    #+#             */
 /*   Updated: 2019/11/11 08:47:07 by mac              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <fcntl.h>
+#include <stdlib.h>
+#include <sys/uio.h>
+#include<unistd.h>
 #include "get_next_line.h"
 
-int get_next_line(const int fd, char **line)
+char buf[10];
+
+int	main()
 {
-	char	*buf;
-	buf = ft_memmalloc(BUFF_SIZE + 1);
-	if (read(fd,buf,BUFF_SIZE) < 0 || !line || (fd < 0 || fd > MAX_FD) )
-		return (-1);
-	while ((read(fd,buf,BUFF_SIZE)) != 0)
-	{
-		buf = ft_strjoin();
-	}
-	return 0;
+	char	*line;
+	int		fd,bytes;
+	if((bytes = read(fd,buf,BUFF_SIZE))==-1)
+   {
+      printf("Ошибка чтения.\n");
+      exit(1);
+   }
+   printf("Считано %d байт.\n",bytes);
+   printf("%d", fd);
+   get_next_line(fd, &line);
+   return 0;
 }

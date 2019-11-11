@@ -42,8 +42,8 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	@ar rc $(NAME) $(OBJECTS)
 	@ranlib $(NAME)
-	@echo "Make"
-	@echo "Make succesfull"
+	echo "Make"
+	echo "Make succesfull"
 
 $(O): %.o: %.c
 	@gcc -Wall -Wextra -Werror -c $^

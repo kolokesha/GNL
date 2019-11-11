@@ -13,9 +13,9 @@
 #include "libft.h"
 #include <stdio.h>
 
-int ft_atoi(const char *str)
+int		ft_atoi(const char *str)
 {
-	int i;
+	int				i;
 	long long int	result;
 	long long int	neg;
 
@@ -42,8 +42,8 @@ int ft_atoi(const char *str)
 	return (result * neg);
 }
 
-int main(void)
+int main()
 {
 	printf("%d", ft_atoi("123123123"));
-
+	
 }
