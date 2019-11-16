@@ -11,18 +11,19 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *str)
 {
-	int		i;
-	char	*tmp;
-	int		length;
+	size_t		i;
+	char		*tmp;
+	size_t		length;
 
 	i = 0;
 	length = 0;
 	while (str[length])
 		length++;
-	if (!str || !(tmp = (char *)malloc(sizeof(char) * (length + 1))))
+	if (!str || !(tmp = ft_memalloc(length + 1)))
 		return (NULL);
 	while (i <= length)
 	{

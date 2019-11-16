@@ -19,9 +19,14 @@ int	main(int ac, char **av)
    int fd1;
    int fd2;
 
-   fd1 = open(av[1], O_RDONLY);
-   fd2 = open(av[2], O_RDONLY);
-   get_next_line(fd1, &line);
+   line = ft_memalloc(BUFF_SIZE);
+   if(ac != 3)
+      printf("zaebal normalno sdelay");
+   else
+   {
+      fd1 = open(av[1], O_RDONLY);
+      fd2 = open(av[2], O_RDONLY);
+      get_next_line(fd1, &line);
    printf("%s\n", line);
    get_next_line(fd1, &line);
    printf("%s\n", line);
@@ -37,5 +42,7 @@ int	main(int ac, char **av)
    printf("%s\n", line);
    get_next_line(fd2, &line);
    printf("%s\n", line);
+   }
+   free(line);
    return (0);
 }
