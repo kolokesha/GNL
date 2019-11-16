@@ -1,0 +1,3 @@
+valgrind --leak-check=full --show-leak-kinds=all --show-reachable=yes --track-origins=yes --verbose --log-file=valgrind.txt ./test
+gcc -O0 -g main.c get_next_line.c libft/ft_memalloc.c libft/ft_strchr.c libft/ft_strdel.c libft/ft_strdup.c libft/ft_strjoin.c libft/ft_strsub.c libft/ft_strlen.c libft/ft_bzero.c libft/ft_strcat.c libft/ft_strcpy.c libft/ft_strncpy.c libft/ft_memchr.c -o test
+
